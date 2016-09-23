@@ -25,7 +25,8 @@ header {
 	float: left;
 	width: 100%;
 	background-image: url(../img/backhm.jpg);
-	background-size: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 
@@ -77,6 +78,7 @@ header {
 	padding: 12% 0;
 	padding-bottom: 1%;
 	font-weight: 900;
+	line-height: 40px;
 }
 .tx-sec {
 	font-size: 16pt;
@@ -102,14 +104,16 @@ header {
 }
 .bio-tx {
 	float: left;
-	width: 80%;
+	width: 75%;
 	padding: 2%;
 	padding-top: 1%;
 	color: #333;
+	opacity: 0;
 }
 .bio-ph {
-	float: left;
-	width: 15%;
+	float: right;
+	width: 17%;
+	opacity: 0;
 }
 .pht {
 	float: left;
@@ -118,6 +122,8 @@ header {
 }
 .pht-rd {
 	border-radius: 50%;
+	width: 180px;
+	height: 190px;
 }
 .pht2 {
 	width: 100%;
@@ -148,6 +154,9 @@ header {
 	width: 65%;
 	padding: 0 2%; 
 }
+.prsi-ph, .prsi-tx {
+	transition: 0.3s ease;
+}
 .tisi {
 	text-align: center;
 	font-size: 16pt;
@@ -168,7 +177,7 @@ header {
 	width: 100%;
 	margin: 3% 0;
 	background-image: url(../img/backhm.jpg);
-	background-size: 100%;
+	background-size: 100% 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
@@ -259,7 +268,8 @@ a.prcont:hover {
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	margin: 5%;
+	margin: 5%;	
+	transition: 0.3s ease;
 }
 .prctx {
 	float: left;
@@ -315,7 +325,7 @@ a.prcont:hover {
 	box-shadow: 0 0 5px 1px #ccc;
 }
 .ppor2 {
-	width: 200px;
+	width: 180px;
 	height: 170px;
 }
 .ortx {
@@ -339,6 +349,9 @@ a.prcont:hover {
 	width: 100%;
 	padding: 1% 0;
 }
+.mainor2 {
+	padding-left: 3%;
+}
 
 .lnor {
 	float: left;
@@ -357,6 +370,7 @@ a.prcont:hover {
 
 .prtt.cnt {
 	margin: 3% 0;
+	opacity: 0;
 }
 .ort.cnt {
 	margin: 4% 0;
@@ -390,6 +404,7 @@ footer {
 	float: left;
 	width: 20%;
 	margin-left: 10%;
+	transition: 0.3s ease;
 }
 .tfsub {
 	float: left;
@@ -405,6 +420,7 @@ a .mainsub {
 	text-decoration: none;
 }
 
+/*---------- Generally ----------*/
 
 .fullfloat {
 	float: left;
@@ -417,7 +433,7 @@ a:hover {
 	position: fixed;
 	bottom: 4%;
 	right: 2%;
-	padding: 1% 1.5% 0.5% 1.5%;
+	padding: 1% 1.5% 0.6% 1.5%;
 	background-color: #3366DD;
 	transition: 0.3s ease;
 	opacity: 0;
@@ -425,4 +441,166 @@ a:hover {
 .sctp:hover {
 	cursor: pointer;
 	background-color: #3344BB;
+}
+
+
+/*---------- Responsive ----------*/
+
+
+@media only screen and (max-width: 1300px){
+	.primg {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 1100px){
+	.primg {
+		margin-left: -6%;
+	}
+	.bio-ph {
+		width: 20%;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.primg {
+		margin-left: -10%;
+	}
+	.prsi-ph {
+		width: 20%;
+		margin-left: 40%;
+	}
+	.prsi-tx {
+		width: 90%;
+		margin: 4%;
+		text-align: justify;
+	}
+}
+@media only screen and (max-width: 900px){
+	a.prcont {
+		width: 60%;
+		margin: 2% 20%;
+	}
+	.primg {
+		margin-left: 27%;
+	}
+	.navph, .navmn, .navmn ul, .navmn a li {
+		float: left;
+		width: 100%;
+		margin-left: 0;
+		padding-left: 0;
+	}
+	.phn {
+		width: 20%;
+	}
+	.bio-ph {
+		float: left;
+		width: 40%;
+		margin-left: 40%;
+	}
+	.bio-tx {
+		width: 90%;
+		margin-left: 4%;
+		text-align: justify;
+	}
+	.orcon {
+		width: 100%;
+		margin-left: 2%;
+		text-align: justify;
+	}
+	.ortx {
+		width: 90%;
+	}
+	.mainor2 {
+		padding-left: 0;
+	}
+	.ppbg {
+		width: 100%;
+	}
+	.ppor, .ppor2 {
+		box-shadow: none;
+		width: 30%;
+	}
+	.ttor {
+		text-align: left;
+	}
+}
+@media only screen and (max-width: 700px){
+	.primg {
+		margin-left: 20%;
+	}
+	.prsi-ph {
+		width: 40%;
+		margin-left: 35%;
+	}
+	.pht2 {
+		margin-bottom: 3%;
+		margin-left: -20%;
+	}
+	.fsub {
+		width: 98%;
+		margin-bottom: 6%;
+	}
+	.contentsk {
+		width: 21%;
+	}
+	.ppor, .ppor2 {
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 500px){
+	.primg {
+		margin-left: 8%;
+	}
+	.prsi-ph {
+		margin-left: 30%; 
+	}
+	.pht2 {
+		margin-left: -5%;
+	}
+	.tx-main {
+		font-size: 20pt;
+	}
+	.tx-main, .tx-sec {
+		width: 90%;
+		margin-left: 5%;
+	}
+	.phn {
+		width: 40%;
+	}
+	.sctp {
+		display: none;
+	}
+	.orcon {
+		margin-left: 5%;
+	}
+}
+@media only screen and (max-width: 450px){
+	.contentsk {
+		width: 29%;
+	}	
+	.prsi-ph {
+		width: 50%;
+		margin-left: 27%;
+	}
+	.pht2 {
+		margin-left: -5%;
+	}
+	.bio-ph {
+		margin-left: 25%;
+		margin-bottom: 4%;
+	}
+	.primg {
+		margin-left: 2%; 
+	}
+	.prtt, .ort {
+		margin: 4% 0;
+	}
+	.ppor, .ppor2 {
+		width: 90%;
+	}
+	.fcp {
+		padding: 2%;
+	}
+	.prtt.cnt {
+		margin-left: 0;
+	}
 }

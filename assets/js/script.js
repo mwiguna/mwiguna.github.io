@@ -11,10 +11,10 @@
           $(".sctp").animate({'opacity': '1'}, 10);
           $(".orcon").animate({'opacity': '1', 'marginTop': '0'}, 1500);
         }
-        else if(y >= 1300){
+        else if(y >= 1350){
           $(".sctp").animate({'opacity': '1'}, 10);
           $(".prmain").animate({'opacity': '1', 'marginTop': '6%'}, 1000);
-        } else if(y >= 650){
+        } else if(y >= 750){
           $(".sctp").animate({'opacity': '1'}, 10);
           $(".skc").animate({'opacity': '1', 'marginTop': '0px'}, 2000);
         } else if(y >= 150){
@@ -58,6 +58,10 @@
           scrollTop: $("#organization").offset().top
         }, 1500);
       });
+
+      $(".bio-tx").animate({'opacity': '1'}, 1000);
+      $(".bio-ph").delay(500).animate({'opacity': '1'}, 500);
+      $(".prtt.cnt").animate({'opacity': '1'}, 1000);
 
       $(".sctp").click(function(){
         $('html, body').animate({ scrollTop: 0}, 800);
