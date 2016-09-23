@@ -14,7 +14,7 @@
  	line-height: 30px;
 }
 
-body {
+html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -603,5 +603,11 @@ a:hover {
 	}
 	.prtt.cnt {
 		margin-left: 0;
+	}
+	.navph {
+		padding-top: 25%;
+	}
+	.tx-sec {
+		padding-bottom: 25%;
 	}
 }
