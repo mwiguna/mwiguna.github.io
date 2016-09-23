@@ -47,7 +47,8 @@
       }
 
 
-      //action
+
+      //Action
       $("#btn-portfolio").click(function(){
         $('html, body').animate({
           scrollTop: $("#portfolio").offset().top
@@ -58,12 +59,34 @@
           scrollTop: $("#organization").offset().top
         }, 1500);
       });
+      $(".btn-contact").click(function(){
+        $('html, body').animate({
+          scrollTop: $("#contact").offset().top
+        }, 1500);
+      });
+       $(".btn-socmed").click(function(){
+        $('html, body').animate({
+          scrollTop: $(".scm").offset().top
+        }, 500);
+      });
 
       $(".bio-tx").animate({'opacity': '1'}, 1000);
       $(".bio-ph").delay(500).animate({'opacity': '1'}, 500);
-      $(".prtt.cnt").animate({'opacity': '1'}, 1000);
 
       $(".sctp").click(function(){
         $('html, body').animate({ scrollTop: 0}, 800);
+      });
+
+
+
+      //Route
+      var app = angular.module('app', ['ngRoute']);
+
+      app.config(function($routeProvider){
+        $routeProvider
+        .when('/kontak', {
+          templateUrl: 'contact.html'
+        })
+        .otherwise({redirectTo: '/'})
       });
   });

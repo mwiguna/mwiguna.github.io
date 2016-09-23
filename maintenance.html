@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,8 @@
 	<link rel="shortcut icon" href="assets/img/favicon.png"> 
 	<script type="text/javascript" src="assets/js/jquery3.min.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
-
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular-route.js"></script>
 </head>
 <body>
 
@@ -20,9 +21,9 @@
 				</div>
 				<div class="navmn">
 					<ul>
-						<a id="btn-portfolio"><li>PORTFOLIO</li></a>
-						<a id="btn-organization"><li>ORGANIZATION</li></a>
-						<a href="contact.html"><li>CONTACT</li></a>
+						<a href="#/" id="btn-portfolio"><li>PORTFOLIO</li></a>
+						<a href="#/" id="btn-organization"><li>ORGANIZATION</li></a>
+						<a href="#/kontak" class="btn-contact"><li>CONTACT</li></a>
 					</ul>
 				</div>
 			</div>
@@ -103,6 +104,10 @@
 			</div>
 		</div>
 
+		<div id="contact">
+			<div ng-view></div>
+		</div>
+
 	</main>
 
 	<footer>
@@ -121,9 +126,9 @@
 			</div>
 			<div class="fsub">
 				<div class="tfsub">Contact Me</div>
-				<a href="contact.html"><div class="mainsub">E-mail</div></a>
-				<a href="contact.html"><div class="mainsub">Personal Contact</div></a>
-				<a href="contact.html"><div class="mainsub">Social Media</div></a>
+				<a href="#/kontak" class="btn-contact"><div class="mainsub">E-mail</div></a>
+				<a href="#/kontak" class="btn-contact"><div class="mainsub">Personal Contact</div></a>
+				<a href="#/kontak" class="btn-socmed"><div class="mainsub">Social Media</div></a>
 			</div>
 		</div>
 		<div class="fcp">Copyright &copy; 2016 M. Wiguna Saputra</div>
