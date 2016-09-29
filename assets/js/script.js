@@ -267,7 +267,7 @@
       $(".tx-main, .tx-sec, .bio-tx").animate({'opacity': '1'}, 1000);
       $(".bio-ph").delay(500).animate({'opacity': '1'}, 500);
       
-      $(".cpno1, #vmenu").click(function(){
+      $(".cpno1, #vmenu, .btn-blog1").click(function(){
         $(".cpno2, .cpno3").removeClass("act");
         $(".cpno1").addClass("act");
       });
