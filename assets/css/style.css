@@ -1,7 +1,7 @@
 /*
 	CSS Document
 	Author : M. Wiguna Saputra
-	2016
+	Copyright 2016
 */
 
 @font-face {
@@ -95,7 +95,6 @@ header {
 
 
 /*---------- BIO ----------*/
-
 
 
 .bio-fls {
@@ -327,13 +326,14 @@ a.prcont:hover {
 	box-shadow: 0 0 5px 1px #ccc;
 }
 .ppor2 {
-	width: 180px;
+	width: 240px;
 	height: 170px;
 }
 .ortx {
 	float: left;
-	width: 80%;
+	width: 77%;
 	padding: 1%;
+	text-align: justify;
 }
 .ortx2 {
 	padding-left: 2%;
@@ -368,12 +368,172 @@ a.prcont:hover {
 }
 
 
+/*--------- Blog --------*/
+
+aside {
+	opacity: 0;
+}
+#blog {
+	float: left;
+	width: 100%;
+	margin-bottom: 3%;
+	margin-top: 0;
+	min-height: 1000px;
+}
+.ttlbl {
+	float: left;
+	width: 98%;
+	padding: 1% 0;
+	padding-left: 4%;
+	margin: 0;
+	font-size: 16pt;
+	background-color: #3A464B;
+	color: #fff;
+}
+.mainbl {
+	float: left;
+	width: 100%;
+}
+.conbl {
+	float: left;
+	width: 60%;
+	margin-right: 10%;
+	margin-left: 4%;
+	padding: 2%;
+	text-align: justify;
+}
+.linebl {
+	float: left;
+	width: 10%;
+	padding-top: 4%;
+	margin-left: 8%;
+	right: 5%;
+	top: 20%;
+	position: fixed;
+	transition: 0.2s ease;
+	opacity: 0;
+}
+.pageno {
+	float: left;
+	width: 90%;
+	margin: 1% 6%;
+	display: none;
+}
+.cpno {
+	float: left;
+	padding: 0.75% 1.5%;
+	color: #444;
+	border: 1px solid #444;
+	transition: 0.3s ease;
+}
+.cpno:hover {
+	background-color: #3A464B;
+	color: #fff;
+	cursor: pointer;
+}
+.cpno.act{
+	background-color: #3A464B;
+	color: #fff;
+}
+.cpno2 {
+	border-right: none;
+	border-left: none;
+}
+.blb {
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	background-color: #37D;
+	transition: 0.3s ease;
+}
+.blb2, .blb3 {
+	background-color: #999;
+}
+.blb:hover {
+	cursor: pointer;
+}
+.grb {
+	border-left: 4px solid #38D;
+	margin-left: 4.2%;
+	height: 150px;
+	transition: 0.5s ease;
+}
+.grb1, .grb2 {
+	border-left-color: #bbb;
+}
+.ctbb {
+	float: left;
+	width: 100%;
+	margin-bottom: 8%;
+	color: #555;
+}
+.lnbl a {
+	float: left;
+	width: 100%;
+	text-decoration: none;
+	color: #333;
+	font-size: 17pt;
+	font-weight: 900;
+	margin-top: 3%;
+}
+.lnbl:hover a {
+	color: #000;
+}
+.ibl {
+	float: left;
+	width: 100%;
+	margin: 2% 0;
+}
+.ttlv0, .ttlv1, .ttlv2 {
+	float:left;
+	width: 100%;
+} 
+#aview {
+	opacity: 0;
+}
+#view {
+	float: left;
+	width: 60%;
+	opacity: 0;
+	margin-top: 4%;
+	margin-left: 6%;
+}
+#vmenu {
+	float: left;
+	width: 33%;
+	margin-top: 4%;
+	opacity: 0;
+	display: none;
+	transition: 0.3s ease;
+}
+#vmenu span {
+	float: left;
+	padding: 2% 0;
+	padding-right: 10%;
+	width: 75%;
+	color: #fff;
+	text-align: right;
+	background-color: #3A464B;
+	font-weight: 900;
+	border-right: 7px solid #36C;
+	transition: 0.2s ease;
+	margin-left: 15%;
+	margin-top: 10%;
+	border-radius: 2px;
+	box-shadow: 0 0 3px 1px #ccc;
+}
+#vmenu span:hover {
+	cursor: pointer;
+	background-color: #2A363B;
+}
+
 /*--------- Contact --------*/
 
 #contact {
 	float: left;
 	width: 100%;
 	margin: 2% 0;
+	margin-top: 0;
 }
 .cnttl {
 	float: left;
@@ -388,6 +548,29 @@ a.prcont:hover {
 .ort.cnt.scm {
 	margin-top: 4%;
 }
+#f2 {
+	opacity: 0;
+}
+.gmaps {
+	float: left;
+	width: 100%;
+	height: 500px;
+	opacity: 0;
+	position: absolute;
+	left: -100%;
+}
+#map {
+	height: 100%;
+}
+.tgm {
+	width: 98%;
+	background-color: #5A666B;
+	padding: 1%;
+	color: #fff;
+	font-weight: 900;
+	text-align: center;
+}
+
 
 /*--------- Footer --------*/
 
@@ -463,6 +646,14 @@ a:hover {
 	.primg {
 		margin-left: 0;
 	}
+	.grb {
+		margin-left: 5%;
+	}
+}
+@media only screen and (max-width: 1250px){
+	.ppor2 {
+		width: 210px;
+	}
 }
 @media only screen and (max-width: 1100px){
 	.primg {
@@ -470,6 +661,31 @@ a:hover {
 	}
 	.bio-ph {
 		width: 20%;
+	}
+	.navmn {
+		width: 60%;
+	}
+	.conbl {
+		width: 89%;
+	}
+	#vmenu{
+		position: relative !important;
+		margin-top: 0;
+		margin-right: 40%;
+	}
+	.linebl {
+		display: none !important;
+	}
+	.ttlbl {
+		position: relative !important;
+		box-shadow: none !important;
+	}
+	.mainbl {
+		margin-top: 0 !important;
+	}
+	.ppor2 {
+		width: 190px;
+		height: 150px;
 	}
 }
 @media only screen and (max-width: 1000px){
@@ -484,6 +700,12 @@ a:hover {
 		width: 90%;
 		margin: 4%;
 		text-align: justify;
+	}
+	.ppbg {
+		width: 20%;
+	}
+	.ortx {
+		width: 70%;
 	}
 }
 @media only screen and (max-width: 900px){
@@ -557,6 +779,15 @@ a:hover {
 	.ppor, .ppor2 {
 		width: 60%;
 	}
+	#vmenu {
+		width: 60%;
+		float: right;
+		margin: 4% 0;
+		margin-right: 5%;
+	}
+	.lnbl a {
+		font-size: 14pt;
+	}
 }
 @media only screen and (max-width: 500px){
 	.primg {
@@ -583,6 +814,12 @@ a:hover {
 	}
 	.orcon {
 		margin-left: 5%;
+	}
+	.cpno {
+		padding: 1% 4%;
+	}
+	.ttlbl {
+		font-size: 14pt;
 	}
 }
 @media only screen and (max-width: 450px){

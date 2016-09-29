@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="assets/js/script.min.js"></script>
 	<script type="text/javascript" src="assets/js/angular.min.js"></script>
 	<script type="text/javascript" src="assets/js/angular-route.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc55E2lMhX6XzSzsC3Wjvwy_9MEcTZpbY&callback=initMap" async defer></script>
 </head>
 <body>
 
@@ -24,6 +25,7 @@
 						<a href="#/" id="btn-portfolio"><li>PORTFOLIO</li></a>
 						<a href="#/" id="btn-organization"><li>ORGANIZATION</li></a>
 						<a href="#/kontak" class="btn-contact"><li>CONTACT</li></a>
+						<a href="#/blog" class="btn-blog1"><li>BLOG</li></a>
 					</ul>
 				</div>
 			</div>
@@ -104,11 +106,20 @@
 			</div>
 		</div>
 
-		<div id="contact">
-			<div ng-view></div>
-		</div>
-
 	</main>
+
+	<div ng-view id="aview"></div>
+	<div id="view"></div>
+	<a href="#/blog" class="btn-blog1" id="vmenu"><span>&laquo; Back To Blog</span></a>
+	<div class="pageno">
+		<div class="cpno cpno1 act btn-blog1">1</div>
+		<div class="cpno cpno2 btn-blog2">2</div>
+		<div class="cpno cpno3 btn-blog3">3</div>
+	</div>
+	<div class="gmaps">
+		<div class="tgm">My Location<br>Jln. Radja Yamin, No. 091, Kec. Danau Sipin, Jambi, Indonesia</div>
+		<div id="map"></div>
+	</div>
 
 	<footer>
 		<div class="fmain">

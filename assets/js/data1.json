@@ -1,0 +1,17 @@
+[
+	{
+		"title": "<a>Angular JS 2 telah rilis! Framework Javascript yang sangat powerful</a>",
+		"photo": "assets/img/angularlogo.png",
+		"article": "Lorem ipsum dolor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserun Lorem ipsum dolar sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore mollit anim id est laborum."
+	},
+	{
+		"title": "<a>React JS 2 telah rilis! Framework Javascript yang sangat powerful</a>",
+		"photo": "assets/img/reactlogo.png",
+		"article": "Lorem ipsum dolar sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur Lorem ipsum dolar sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore sint occaecat cupidatat non proident, sunt in culpa qui officia deserun mollit anim id est laborum."
+	},
+	{
+		"title": "<a>Mengenal Single Page Application (SPA)</a>",
+		"photo": "assets/img/spaback.jpg",
+		"article": "Apa itu Single Page Application (SPA)? Apa itu Lorem? ipsum dolar sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat Lorem ipsum dolar sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore non proident, sunt in culpa qui officia deserun mollit anim id est laborum."
+	}
+]
