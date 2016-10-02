@@ -31,7 +31,7 @@
           $(".grb1").css({"borderColor": "#bbb"});
           $(".blb2").css({"backgroundColor": "#999"});
           $(".linebl").css({'opacity': '1'});
-          $("#vmenu").css({"opacity": "1", "position": "fixed", "top": "10%", "right": "2%"});
+          $("#vmenu").css({"opacity": "1", "position": "fixed", "right": "2%"});
           $(".ttlbl").css({"position": "fixed", "top": "0", "boxShadow": "0 0 6px 1px #ccc"});
           $(".mainbl, #view").css({"marginTop": "4%"});
         } else if(y >= 150){
