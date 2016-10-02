@@ -32,7 +32,7 @@
           $(".blb2").css({"backgroundColor": "#999"});
           $(".linebl").css({'opacity': '1'});
           $("#vmenu").css({"opacity": "1", "position": "fixed", "right": "2%"});
-          $(".ttlbl").css({"position": "fixed", "top": "0", "boxShadow": "0 0 6px 1px #ccc"});
+          $(".ttlbl").css({"position": "fixed", "top": "0", "boxShadow": "0 0 3px 1px #999"});
           $(".mainbl, #view").css({"marginTop": "4%"});
         } else if(y >= 150){
           $(".linebl").css({'opacity': '0'});

@@ -509,22 +509,21 @@ aside {
 #vmenu span {
 	float: left;
 	padding: 2% 0;
+	color: #000;
 	padding-right: 10%;
 	width: 75%;
-	color: #fff;
 	text-align: right;
-	background-color: #3A464B;
 	font-weight: 900;
-	border-right: 7px solid #36C;
-	transition: 0.2s ease;
+	border: 1px solid #aaa;
+	transition: 0.3s ease;
 	margin-left: 15%;
 	margin-top: 10%;
 	border-radius: 2px;
-	box-shadow: 0 0 3px 1px #ccc;
 }
 #vmenu span:hover {
 	cursor: pointer;
-	background-color: #2A363B;
+	color: #fff;
+	background-color: #3A464B;
 }
 
 /*--------- Contact --------*/
