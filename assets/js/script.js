@@ -310,7 +310,7 @@
         
     var marker = new google.maps.Marker({
       position: {lat: -1.61405, lng: 103.58705},
-      icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+      icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png",
       map: map,
       title: "My Location"
     });
