@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rewidify - Mini Library Grid System to make Responsive Web Design</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/rewidify.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleRewidify.css">
+	<script type="text/javascript" src="../assets/js/jquery3.min.js"></script>
+	<script type="text/javascript" src="../assets/js/prism.js"></script>
+	<script type="text/javascript" src="assets/js/styleRewidify.js"></script>
+</head>
+<body>
+
+	<header class="row">
+		<div class="col-12" id="tx">
+			<div class="col-12">
+				<div class="col-2 col-md-8 logo">REWIDIFY</div>
+				<a class="col-2 col-md-8 gtButton">Getting Started</a>
+				<a class="col-2 col-md-8 ctButton">Customize</a>
+				<a class="col-2 col-md-8 egButton">Example</a>
+			</div>
+			<div class="tx-main">Rewidify</div>
+			<div class="tx-sec">
+				<div class="col-12">Mini Library Grid System to make Responsive Web Design</div>
+				<div class="col-12">
+					<a href="assets/doc/rewidify.zip" class="col-2 offset-5 download">Download</a>
+				</<div>
+				<div class="col-12 version">Stable v.1.0.0</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="row">
+		<div class="col-12">
+			<div class="col-4 col-lg-10">
+				<div class="col-12">Easy</div>
+				<div class="col-12">Really easy for use.</div>
+				<div class="col-8 offset-2 line-prev">&nbsp;</div>
+			</div>
+			<div class="col-4 col-lg-10">				
+				<div class="col-12">Light</div>
+				<div class="col-12">Lightweight make it fast.</div>
+				<div class="col-8 offset-2 line-prev">&nbsp;</div>
+			</div>
+			<div class="col-4 col-lg-10">
+				<div class="col-12">Powerful</div>
+				<div class="col-12">Great Features and full responsive!</div>
+				<div class="col-8 offset-2 line-prev">&nbsp;</div>
+			</div>
+		</div>
+		<div class="col-12 main-menu">
+			<div class="col-3 col-lg-10">
+				<div class="col-12 button-menu"><span class="buttonStyle gtButton">Getting Started</span></div>
+				<div class="col-12 button-menu">
+					<span class="buttonStyle ctButton">Customize</span>
+					<li   class="buttonStyle grButton">Grid Options</li>
+					<li   class="buttonStyle contButton">Container</li>
+					<li   class="buttonStyle pushButton">Push</li>
+					<li   class="buttonStyle offsetButton">Offset</li>
+				</div>
+				<div class="col-12 button-menu"><span class="buttonStyle egButton">Example</span></div>
+			</div>
+			<div class="col-9 col-lg-10">
+				<div class="col-12 title" id="getStarted">Getting Started</div>
+				<div class="col-11 push-1">
+					Use Meta Tag Viewport in the Tag Head of your HTML files :
+					<pre><code class="language-markup">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+					The meta tag viewport going to make your browser can detect the window size.<br>
+					Then Download and include rewidify.css/rewidify.min.css into your files :
+					<pre><code class="language-markup">&lt;link rel="stylesheet" type="text/css" href="rewidify.css"&gt;</code></pre>
+				</div>
+				<div class="col-12 title" id="customize">Customize</div>
+				<div class="col-11 push-1">
+				Rewidify has 12 columns. You must include class="col-*" into class="row". see the code below :
+				<pre><code class="language-markup">
+&lt;div class="row"&gt;
+    &lt;div class="col-12"&gt;Column 12&lt;/div&gt; 
+    &lt;div class="col-11"&gt;Column 11&lt;/div&gt;
+    &lt;div class="col-10"&gt;Column 10&lt;/div&gt;
+    &lt;div class="col-9"&gt;Column 9&lt;/div&gt;
+    &lt;div class="col-8"&gt;Column 8&lt;/div&gt;
+    &lt;div class="col-7"&gt;Column 7&lt;/div&gt;
+    &lt;div class="col-6"&gt;Column 6&lt;/div&gt;
+    &lt;div class="col-5"&gt;Column 5&lt;/div&gt;
+    &lt;div class="col-4"&gt;Column 4&lt;/div&gt;
+    &lt;div class="col-3"&gt;Column 3&lt;/div&gt;
+    &lt;div class="col-2"&gt;Column 2&lt;/div&gt;
+    &lt;div class="col-1"&gt;Column 1&lt;/div&gt;
+&lt;/div&gt;
+				</code></pre>
+				<h2 class="gridOp">Grid Options</h2>
+				You may use more options columns for different window sizes :
+					<div class="col-12">
+						<div class="col-3 col-md-4 col-sm-6 menuCol">
+							>= 610px <br> Small Devices <br> Smartphones
+							<span class="codeCol col-12">col-xs-*</span>
+						</div>
+						<div class="col-3 col-md-4 col-sm-6 menuCol">
+							>= 740px <br> Small Devices <br> Tablets
+							<span class="codeCol col-12">col-sm-*</span>
+						</div>
+						<div class="col-3 col-md-4 col-sm-6 menuCol">
+							>= 840px <br> Medium Devices <br> Tablets
+							<span class="codeCol col-12">col-md-*</span>
+						</div>
+						<div class="col-3 col-md-4 col-sm-6 menuCol">
+							>= 990px <br> Medium Devices <br> Desktops
+							<span class="codeCol col-12">col-lg-*</span>
+						</div>
+						<div class="col-12 menuCol">
+							>= 1180px <br> Large Devices Desktops
+							<span class="codeCol col-12">col-*</span>
+						</div>
+					</div>
+					<br>Each grid options has 12 columns.<br>
+				<h2 class="contOp">Container</h2>
+					<div class="col-12">
+					You may use class="container" :
+					<pre><code class="language-markup">
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-8"&gt;Column 8&lt;/div&gt;
+        &lt;div class="col-7"&gt;Column 7&lt;/div&gt;
+        &lt;div class="col-6"&gt;Column 6&lt;/div&gt;   
+    &lt;/div&gt;
+&lt;/div&gt;
+					</code></pre><br>
+					</div>
+				<h2 class="pushOp">Push</h2>
+					<div class="col-12">
+						You may use class="push-*" to push your column (make empty space on the right side) :
+						<pre><code class="language-markup">
+&lt;div class="row"&gt;
+    &lt;div class="col-8 push-2"&gt;Column 8&lt;/div&gt;
+    &lt;div class="col-7 push-1"&gt;Column 7&lt;/div&gt;
+    &lt;div class="col-6"&gt;Column 6&lt;/div&gt;   
+&lt;/div&gt;
+						</code></pre>
+						There are 12 push classes to make empty space. <br><br>
+					</div>
+				<h2 class="offsetOp">Offset</h2>
+					<div class="col-12">
+						Offset is the opposite of the Push. Offset useful for push your column from the left side (make empty space on the left side) :
+						<pre><code class="language-markup">
+&lt;div class="row"&gt;
+    &lt;div class="col-8 offset-2"&gt;Column 8&lt;/div&gt;
+    &lt;div class="col-7 offset-1"&gt;Column 7&lt;/div&gt;
+    &lt;div class="col-6"&gt;Column 6&lt;/div&gt;   
+&lt;/div&gt;
+						</code></pre>
+						There are 12 offset classes to make empty space as well. <br>
+					</div>
+				</div>
+				<div class="col-12 title" id="example">Example</div>
+					<div class="col-12">
+					This is an example for making Responsive Web Design with Rewidify.
+					Don't forget to download and include rewidify.css/rewidify.min.css into your HTML files first. <br><br>
+
+					Here is the code : 
+					<pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+	&lt;title&gt;Rewidify - Example&lt;/title&gt;
+	&lt;link rel="stylesheet" type="text/css" href="rewidify.css"&gt;
+	&lt;style&gt;
+		h1, h2 {text-align: center;}
+		.col-3 {padding: 4% 2%; text-align: justify;}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="row"&gt;
+	&lt;div class="col-12"&gt;&lt;h1&gt;Welcome To My Responsive Website!&lt;/h1&gt;&lt;/div&gt;
+
+	&lt;div class="container"&gt;
+		&lt;div class="col-12"&gt;
+			&lt;div class="col-3 col-lg-5 col-md-8"&gt;
+				&lt;div class="col-12"&gt;&lt;h1&gt;This is Title!&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col-3 col-lg-5 col-md-8"&gt;
+				&lt;div class="col-12"&gt;&lt;h1&gt;This is Title!&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col-3 col-lg-5 col-md-8"&gt;
+				&lt;div class="col-12"&gt;&lt;h1&gt;This is Title!&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col-3 col-lg-5 col-md-8"&gt;
+				&lt;div class="col-12"&gt;&lt;h1&gt;This is Title!&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class="col-12"&gt;
+			&lt;div class="col-8 col-lg-10"&gt;
+				&lt;div class="col-12"&gt;&lt;h1&gt;This is My Article!&lt;/h1&gt;&lt;/div&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class="col-4 col-lg-10"&gt;
+				&lt;h2 class="col-12"&gt;Recent News&lt;/h2&gt;
+				&lt;div class="col-12"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="col-12"&gt;&lt;h2&gt;&lt;br&gt;Copyright &amp;copy; My Website&lt;/h2&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					<a href="example.html" class="buttonStyle">See the Result &raquo;</a><br>
+					</div>
+
+				<div class="col-12">
+					<div class="col-1">Github :</div>
+					<a href="https://github.com/mwiguna/rewidify" class="col-10">https://github.com/mwiguna/rewidify</a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="row">
+		<div class="col-12">Copyright &copy; 2016 Rewidify <br> All Rights Reserved.</div>
+	</footer>
+
+</body>
+</html>

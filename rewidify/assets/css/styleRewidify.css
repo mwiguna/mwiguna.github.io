@@ -1,0 +1,144 @@
+
+[class*="col-"] {
+	/*border: 1px solid #ccc;*/
+}
+
+
+/*------------ Header -----------*/
+
+header {
+	background: rgba(60, 120, 220, 1);
+	box-shadow: 0 0 7px 2px #aaa;
+}
+header * {
+	font-weight: 900;
+	color: #fff;
+}
+
+a { text-decoration: none; }
+
+#tx {
+	padding-bottom: 5%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+#tx .col-12 {
+	margin: 1% 0;
+}
+#tx a {
+	padding: 1% 0;
+	font-size: 16pt;
+	text-align: center;
+	border-radius: 5px;
+}
+#tx .col-md-8:hover {
+	background-color: rgba(40, 92, 175, 1);
+}
+#tx .logo {
+	padding: 1% 0;
+	font-size: 18pt;
+	background-color: rgba(40, 92, 175, 1);
+	margin-left: 1%;
+}
+.tx-main {
+	padding-top: 10%;
+}
+.download {
+	line-height: 20px;
+	border: 1px solid #fff;
+}
+.download:hover {
+	background-color: #fff;
+	color: rgba(40, 92, 175, 1);
+}
+.version {
+	font-weight: 100;
+	font-size: 12pt;
+}
+
+
+/*------------ Main -----------*/
+
+main {
+	margin: 1% 0;
+}
+main > .col-12 {
+	margin-top: 2%;
+}
+main .col-4 {
+	float: left;
+	margin-bottom: 2%;
+	text-align: center;
+}
+.line-prev {
+	border-bottom: 1px solid #39C;
+}
+.main-menu {
+	margin-top: 2%;
+	padding: 1%;
+}
+.main-menu > .col-9 {
+	padding: 0 2%;
+}
+.button-menu {
+	padding: 4%;
+	border-left: 5px solid #26C;
+	border-bottom: 1px solid #aaa;
+}
+.buttonStyle { 
+	transition: 0.3s ease;
+}
+.buttonStyle:hover {
+	color: #25B;
+	cursor: pointer;
+	font-weight: 900;
+	padding-left: 5%;
+}
+.title {
+	font-size: 18pt;
+	padding: 1% 0;
+	margin: 2% 0;
+	border-bottom: 1px solid #999;
+}
+.menuCol {
+	padding: 2%;
+}
+.codeCol {
+	padding: 2%;
+	background-color: #f2f2f2;
+	color: #24A;
+}
+.col-12 > .codeCol {
+	padding: 1% 2%;
+}
+.ctButton .col-12 {
+	height: 0;
+	padding-left: 5%;
+	background-color: #fff;
+	opacity: 0;
+}
+.ctButton:hover .col-12 {
+	height: 100%;
+	color: #25B;
+	opacity: 1;
+}
+
+/*------------ Footer -----------*/
+
+footer {
+	background-color: #2A363B;
+	padding: 1% 0;
+	text-align: center;
+}
+footer .col-4 {
+	text-align: right;
+	font-style: italic;
+}
+
+
+@media only screen and (max-width: 1160px){
+	.button-menu {padding: 2%;}
+}
+@media only screen and (max-width: 990px){
+	#tx .col-12 { margin-top: 0%; }
+	#tx .logo   { margin-left: 0%; }
+}
