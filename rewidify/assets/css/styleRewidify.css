@@ -139,6 +139,7 @@ footer .col-4 {
 	.button-menu {padding: 2%;}
 }
 @media only screen and (max-width: 990px){
-	#tx .col-12 { margin-top: 0%; }
-	#tx .logo   { margin-left: 0%; }
+	#tx .col-12 {margin-top: 0%;}
+	#tx .logo   {margin-left: 0%;}
+	.download   {line-height: 30px;}
 }
