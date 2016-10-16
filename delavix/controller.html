@@ -1,0 +1,52 @@
+			<div class="col-12 title" id="getStarted">Controller</div>
+				<div class="col-11 push-1">
+					<div class="col-12">
+						Controller is the main process of this application. Controller will become communicator between routing, model, and view. <br><br>
+
+						You may put your controller in <span class="codeCol">/app/Controllers/</span><br> 
+						You must writing the name of your controller with camelCase letter, and must be followed 'Controller' in the end of the name. <br><br>
+
+						Example right name of the controller : <br>
+						<span class="codeCol">homeController.php</span> <br>
+						<span class="codeCol">userController.php</span> <br>
+						<span class="codeCol">adminController.php</span> <br>
+
+						<h3>The Structure of controller</h3>
+						The sturucture of your controller must be similar like this :<br>
+						<pre><code class="language-php">class homeController extends Controller {
+  //put your method here
+}</code></pre>
+						<h3>View your files</h3>
+						You can view your files with method like this :
+						<pre><code class="language-php">class homeController extends Controller {
+    //open home.php
+  	public function index(){
+    	return $this->view('home');
+  	}
+}</code></pre>
+						<h3>Return Data</h3>
+						You can return datas from your controller into the view :
+						<pre><code class="language-php">class homeController extends Controller {
+    //return $user to profile.php
+    public function user(){
+    	$user = "My name's John";
+    	return $this->view('profile', $user);
+  	}
+}</code></pre>
+						Show your datas in the view <span class="codeCol">profile.php</span> : <br>
+						<pre><code class="language-php">echo $user; //output : My name's John</code></pre>
+						<h3>Flash Message</h3>
+						Return the flash message to gives you short messages. <br>
+						<pre><code class="language-php">class homeController extends Controller {
+    public function users(){
+    	$title = "I wanna check this controller.";
+    	return $this->view('users', $title, ["success" => "Success!", "error" => "Error!"]);
+  	}
+}</code></pre> 
+						There are 2 flash messages here, success and error, you can show it in <span class="codeCol">users.php</span> :<br>
+						<pre><code class="language-php">echo $msg->success; //output : Success!
+echo $msg->error; //output: Error!</code></pre>
+						You may modify the flash messages as you want.
+					</div> 
+				</div>
+			<script type="text/javascript" src="../assets/js/prism.js"></script>

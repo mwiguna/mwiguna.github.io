@@ -1,0 +1,35 @@
+			<div class="col-12 title" id="getStarted">Routing</div>
+				<div class="col-11 push-1">
+					<div class="col-12">
+						Routing is define what url which you want to use. <br>
+						You will found the routes file in 
+						<span class="codeCol">/app/routes.php</span>
+
+						<br><br>How to configure it? <br>
+						<pre><code class="language-php">$route->url("/", "home", "index");</code></pre>
+						if you have opened route.php you will see the code like above.<br>
+						That's define of your route, if you access the route "/", the machine will working on "home" Controller in method "index".<br><br>
+
+						If you want to make other routes, you may add route like the code below : <br>
+						<pre><code class="language-php">
+$route->url("/", "home", "index"); //your route
+
+//login page, will worked by homeController -> loginPage Method
+$route->url("/login", "home", "loginPage");
+
+//admin page, will worked by homeController -> adminPage Method
+$route->url("/admin", "home", "adminPage"); 
+						</code></pre>
+
+						So, the term of routes can  interpreted like this :
+						<pre><code class="language-php">
+$route->url("/", "home", "index");
+// "/"         => url
+// "home" => Controller
+// "index" => method 
+						</code></pre>
+						If you don't put the method in the code, the machine will auto describe that route using index method : 
+						<pre><code class="language-php">$route->url("/", "home"); // will working on homeController -> index Method</code></pre>
+					</div>
+				</div>
+			<script type="text/javascript" src="../assets/js/prism.js"></script>

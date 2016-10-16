@@ -1,25 +1,25 @@
 /**
  *	CSS Document
  *	Author : M. Wiguna Saputra
- *	Copyright (c) 2016 Rewidify
+ *	Copyright (c) 2016 Delavix
  */
 
-/*------------ Header -----------*/
+/* ------- Header ------ */
 
 header {
-	background: rgba(60, 120, 220, 1);
-	box-shadow: 0 0 7px 2px #aaa;
+	background: rgba(233, 242, 186, 1);
+	box-shadow: 0 0 7px 2px #ccc;
 }
 header * {
 	font-weight: 900;
-	color: #fff;
+	color: #333;
 }
 
 a { text-decoration: none; }
 
 #tx {
-	padding-bottom: 5%;
-	background-color: rgba(0, 0, 0, 0.1);
+	padding-bottom: 2%;
+	background-color: transparent;
 }
 #tx .col-12 {
 	margin: 1% 0;
@@ -31,46 +31,39 @@ a { text-decoration: none; }
 	border-radius: 5px;
 }
 #tx .col-md-8:hover {
-	background-color: rgba(40, 92, 175, 1);
+	color: #000;
+	background-color: rgba(218, 225, 165, 1);
 }
 #tx .logo {
 	padding: 1% 0;
 	font-size: 18pt;
-	background-color: rgba(40, 92, 175, 1);
+	background-color: rgba(218, 225, 165, 1);
+	border-radius: 5px;
+	color: #000;
 	margin-left: 1%;
 }
 .tx-main {
-	padding-top: 10%;
+	padding-top: 8%;
 }
 .download {
+	color: #333;
 	line-height: 20px;
-	border: 1px solid #fff;
+	border: 1px solid #333;
+	background-color: rgba(233, 242, 186, 1);
 }
 .download:hover {
-	background-color: #fff;
-	color: rgba(40, 92, 175, 1);
+	background-color: #333;
+	color: rgba(233, 242, 186, 1);
 }
 .version {
 	font-weight: 100;
 	font-size: 12pt;
 }
 
+/* ---------- Main ------------ */
 
-/*------------ Main -----------*/
-
-main {
-	margin: 1% 0;
-}
 main > .col-12 {
-	margin-top: 2%;
-}
-main .col-4 {
-	float: left;
-	margin-bottom: 2%;
-	text-align: center;
-}
-.line-prev {
-	border-bottom: 1px solid #39C;
+	margin: 2% 0;
 }
 .main-menu {
 	margin-top: 2%;
@@ -81,14 +74,21 @@ main .col-4 {
 }
 .button-menu {
 	padding: 4%;
-	border-left: 5px solid #26C;
+	border-left: 5px solid #E9D3A0;
 	border-bottom: 1px solid #aaa;
+	font-size: 12pt;
+}
+.button-menu li {
+	font-size: 11pt;
+}
+.button-menu:first-child {
+	border-top: 1px solid #aaa;
 }
 .buttonStyle { 
 	transition: 0.3s ease;
 }
 .buttonStyle:hover {
-	color: #25B;
+	color: #333;
 	cursor: pointer;
 	font-weight: 900;
 	padding-left: 5%;
@@ -99,30 +99,13 @@ main .col-4 {
 	margin: 2% 0;
 	border-bottom: 1px solid #999;
 }
-.menuCol {
-	padding: 2%;
-}
 .codeCol {
-	padding: 2%;
+	padding: 1%;
 	background-color: #f2f2f2;
 	color: #24A;
 }
-.col-12 > .codeCol {
-	padding: 1% 2%;
-}
-.ctButton .col-12 {
-	height: 0;
-	padding-left: 5%;
-	background-color: #fff;
-	opacity: 0;
-}
-.ctButton:hover .col-12 {
-	height: 100%;
-	color: #25B;
-	opacity: 1;
-}
 
-/*------------ Footer -----------*/
+/* -------- Footer -------- */
 
 footer {
 	background-color: #2A363B;
@@ -133,7 +116,6 @@ footer .col-4 {
 	text-align: right;
 	font-style: italic;
 }
-
 
 @media only screen and (max-width: 1160px){
 	.button-menu {padding: 2%;}

@@ -1,3 +1,8 @@
+/**
+ *	Javascript Document
+ *	Author : M. Wiguna Saputra
+ *	Copyright (c) 2016 Rewidify
+ */
 
 $(document).ready(function(){
 	$(".tx-main, .tx-sec").animate({"opacity": "1"});
