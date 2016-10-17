@@ -37,12 +37,12 @@ $(document).ready(function(){
 	});
 	$(".pushButton").click(function(){
 		$("html, body").animate({
-			scrollTop: $(".pushOp").offset().top + 350
+			scrollTop: $(".pushOp").offset().top + 300
 		}, 800);
 	});
 	$(".offsetButton").click(function(){
 		$("html, body").animate({
-			scrollTop: $(".offsetOp").offset().top + 300
+			scrollTop: $(".offsetOp").offset().top + 270
 		}, 800);
 	});
 
