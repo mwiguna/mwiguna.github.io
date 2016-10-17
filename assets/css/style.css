@@ -264,11 +264,21 @@ a.prcont {
 a.prcont:hover {
 	color: #36C;
 }
+a.prcfo {
+	margin-left: 6%;
+}
 .primg {
 	float: left;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
+	margin: 5%;	
+	transition: 0.3s ease;
+}
+.sgimg {
+	float: left;
+	width: 200px;
+	height: 200px;
 	margin: 5%;	
 	transition: 0.3s ease;
 }
@@ -644,7 +654,7 @@ a:hover {
 
 
 @media only screen and (max-width: 1300px){
-	.primg {
+	.primg, .sgimg {
 		margin-left: 0;
 	}
 	.grb {
@@ -657,7 +667,7 @@ a:hover {
 	}
 }
 @media only screen and (max-width: 1100px){
-	.primg {
+	.primg, .sgimg {
 		margin-left: -6%;
 	}
 	.bio-ph {
@@ -690,8 +700,15 @@ a:hover {
 	}
 }
 @media only screen and (max-width: 1000px){
-	.primg {
+	.primg, .sgimg {
 		margin-left: -10%;
+	}
+	.prcfo img {
+		margin-left: 29%;
+	}
+	a.prcfo {
+		width: 60%;
+		margin: 2% 20%;
 	}
 	.prsi-ph {
 		width: 20%;
@@ -714,7 +731,7 @@ a:hover {
 		width: 60%;
 		margin: 2% 20%;
 	}
-	.primg {
+	.primg, .sgimg {
 		margin-left: 27%;
 	}
 	.navph, .navmn, .navmn ul, .navmn a li {
@@ -759,8 +776,11 @@ a:hover {
 	}
 }
 @media only screen and (max-width: 700px){
-	.primg {
+	.primg, .sgimg {
 		margin-left: 20%;
+	}
+	.prcfo img {
+		margin-left:  24%;
 	}
 	.prsi-ph {
 		width: 40%;
@@ -791,8 +811,11 @@ a:hover {
 	}
 }
 @media only screen and (max-width: 500px){
-	.primg {
+	.primg, .sgimg {
 		margin-left: 8%;
+	}
+	.prcfo img {
+		margin-left:  12%;
 	}
 	.prsi-ph {
 		margin-left: 30%; 
@@ -827,6 +850,9 @@ a:hover {
 	.contentsk {
 		width: 29%;
 	}	
+	.prcfo img {
+		margin-left:  2%;
+	}
 	.prsi-ph {
 		width: 50%;
 		margin-left: 27%;
@@ -838,7 +864,7 @@ a:hover {
 		margin-left: 25%;
 		margin-bottom: 4%;
 	}
-	.primg {
+	.primg, .sgimg {
 		margin-left: 2%; 
 	}
 	.prtt, .ort {
