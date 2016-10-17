@@ -72,5 +72,4 @@ $(document).ready(function(){
 
 	//-------------- Sub Main Feature ----------------//
 
-
 });
