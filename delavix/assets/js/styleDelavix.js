@@ -70,6 +70,25 @@ $(document).ready(function(){
 		});
 	});
 
-	//-------------- Sub Main Feature ----------------//
+	//-------------- Animate ----------------//
+
+	$(window).scroll(function(){
+      	var y  = $(window).scrollTop();
+      	var wd = $(window).width();
+      	if(wd >= 1230){
+       		if(y >= 478){
+        		$(".main-features").css({transition: "none"}).addClass("offset-3");
+        		$(".tof").css({position: "fixed", top: "11px"});
+        		$("footer").removeClass('row').addClass('col-9').css({marginLeft: "27%"});	
+        	} else {
+        		$(".main-features").removeClass("offset-3");
+        		$(".tof").css({position: "relative"});
+    		}
+    	} else {
+    		$("footer").addClass('row').removeClass('col-9').css({marginLeft: "0"});
+        	$(".main-features").removeClass("offset-3");
+        	$(".tof").css({position: "relative", top: "0"});
+    	}
+    });
 
 });

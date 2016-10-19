@@ -1,7 +1,34 @@
 			<div class="col-12 title" id="getStarted">View</div>
 				<div class="col-11 push-1">
 					<div class="col-12">
-						
+						View are the files which you want to view to your client.<br>
+						You may put your file which you want to view in <span class="codeCol">/resource/views/</span>.<br><br>
+
+						There is no structure of the view file, you may make it as you want.<br>
+
+						<h3>Open file</h3>
+						<span class="codeCol">homepage.php</span>
+						<pre><code class="language-markup">&lt;h1&gt;This is my homepage!&lt;/h1&gt;</code></pre>
+						You can view it in controller like this : 
+						<pre><code class="language-php">public function homepage(){
+	return $this->view('homepage');
+}
+						</code></pre>
+						<h3>Show Data</h3>
+						You may also return data :
+						<pre><code class="language-php">public function user(){
+	$name = "Rebecca";
+	return $this->view('home', $name);
+}</code></pre>
+						And show it in <span class="codeCol">home.php</span>
+						<pre><code class="language-php">echo $name; //output Rebecca</code></pre>
+
+						<h3>Paginate</h3>
+						You may look at controller part about this method.<br>
+						and you just need echo in view :
+						<pre><code class="language-php">echo $paginate;</code></pre>
+
+						You may use everything you want to view here. <br>
 					</div>
 				</div>
 			<script type="text/javascript" src="../assets/js/prism.js"></script>

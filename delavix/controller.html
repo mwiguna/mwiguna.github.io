@@ -35,6 +35,14 @@
 }</code></pre>
 						Show your datas in the view <span class="codeCol">profile.php</span> : <br>
 						<pre><code class="language-php">echo $user; //output : My name's John</code></pre>
+						<h3>Parameter</h3>
+						If you want to use parameter, first you must set it in route.
+						<pre><code class="language-php">$route->url("/user/:param1", "home", "page");</code></pre>
+						So in controller, you can get it :
+						<pre><code class="language-php">public function user($param1){
+	//you may use $param1 now
+}
+						</code></pre>
 						<h3>Flash Message</h3>
 						Return the flash message to gives you short messages. <br>
 						<pre><code class="language-php">class homeController extends Controller {

@@ -1,7 +1,98 @@
 			<div class="col-12 title" id="getStarted">Model</div>
 				<div class="col-11 push-1">
 					<div class="col-12">
-						
+						Model is used for connect between your app and database.
+						The process will writted in controller, and controller will forward it into Model. <br><br>
+						You may make the model first in <span class="codeCol">/app/Models/</span>
+
+						<h2>The Structure of Model</h2>
+						<span class="codeCol">User.php</span>
+						<pre><code class="language-php">class User extends Model {
+	// Choose table if your table is not plural
+  	public function table(){
+    	return $this->table = 'users';
+  	}
+}
+						</code></pre>
+						If you not set your table, model will automatic define your table name as plural of your model name. <br> User (model name) => users (table name). 
+						<h2>Query Builder</h2>
+						You may use query builder in controller to access database throw model.<br>
+						<h4>Select Data</h4>
+						<pre><code class="language-php">public function users(){
+	$users = $this->model('User')->select()->execute();
+	return $this->view('userpage', $users);
+}
+						</code></pre>
+    					model('User') is the name of your Model. And select()->execute() is a method to select data from database throw Model User. <br>
+    					$users will return as variabel $data in view : <span class="codeCol">userpage.php</span>
+    					<pre><code class="language-php">
+foreach ($data as $user){
+	echo $user->username;
+}
+    					</code></pre>
+    					<h4>Where</h4>
+    					<pre><code class="language-php">$user = $this->model('User')->select()->where('id', '=', $id)->execute();</code></pre>
+    					Show in view :
+    					<pre><code class="language-php">echo $data->username;</code></pre>
+                        <h4>Specific Select</h4>
+                        <pre><code class="language-php">$user = $this->model('User')->select(["id", "username"])->where('id', '=', $id)->execute();</code></pre>
+    					<h4>AND</h4>
+    					<pre><code class="language-php">$user = $this->model('User')->select()->where('username', '=', $username)
+                                       ->where('password', '=', $password)->execute();</code></pre>
+    					<h4>OR</h4>
+    					<pre><code class="language-php">$user = $this->model('User')->select()->where('username', '=', $username)
+                                       ->orWhere('email', '=', $email)->execute();</code></pre>
+    					<h4>Insert Data</h4>
+    					<pre><code class="language-php">$users = $this->model('User')
+    ->insert([
+       "username" => $_POST['username'],
+       "password" => $this->bcrypt($_POST['password'])
+     ]);
+             
+    $this->redirect('home');
+}
+    					</code></pre>
+    					You can use method <span class="codeCol">$this->bcrypt()</span> to secure your password. And you may redirect with method <span class="codeCol">$this->redirect();</span> 
+    					<h4>Update Data</h4>
+    					<pre><code class="language-php">
+$user = $this->model('User')
+    ->update([
+        "username" => $_POST['username'], 
+        "password" => $this->bcrypt($_POST['password'])
+    ])
+    ->where('id', '=', $id)->execute();
+    					</code></pre>
+    					<h4>Delete Data</h4>
+    					<pre><code class="language-php">$user = $this->model('User')->delete()->where('id', '=', $id)->execute();</code></pre>
+    					<h4>Select Distinct</h4>
+    					<pre><code class="language-php">$users = $this->model('User')->distinct(["city"])->execute();</code></pre>
+    					<h4>Limit</h4>
+    					<pre><code class="language-php">$users = $this->model('User')->select()->limit(2, 4)->execute();</code></pre>
+    					<h4>Order By</h4>
+    					<pre><code class="language-php">$users = $this->model('User')->select()->orderBy('id', 'DESC')->execute();
+$users = $this->model('User')->select()->orderBy(['id' => 'DESC', 'name' => 'DESC'])->execute(); //with array
+                        </code></pre>
+    					<h4>Paginate</h4>
+                        Make paginate with delavix is so easy. <br> First, you must make parameter in route : 
+                        <pre><code class="language-php">$route->url("/user/:page", "home", "page");</code></pre>
+                        Then use this method :
+    					<pre><code class="language-php">
+public function paging($page){
+    $users = $this->model('User')->select()->paginate(2, $page)->execute();
+}                       
+                        </code></pre>
+    					And in view :
+    					<pre><code class="language-php">echo $paginate;</code></pre>
+    					<h3>Join</h3>
+    					<h4>Join</h4>
+    					<pre><code class="language-php">  $users = $this->model('User')->select()
+                 ->join('Company')->on('user.username', '=', 'company.employee')->execute();</code></pre>
+    					<h4>Left Join</h4>
+    					<pre><code class="language-php">$users = $this->model('User')->select()
+               ->leftJoin('Company')->on('user.username', '=', 'company.employee')->execute();</code></pre>
+    					<h4>Right Join</h4>
+    					<pre><code class="language-php">$users = $this->model('User')->select()
+               ->rightJoin('Company')->on('user.username', '=', 'company.employee')->execute();</code></pre>
 					</div>
 				</div>
-			<script type="text/javascript" src="../assets/js/prism.js"></script>
+			<script type="text/javascript" src="../assets/js/prism.js"></script>}

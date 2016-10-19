@@ -1,7 +1,49 @@
 			<div class="col-12 title" id="getStarted">Security</div>
 				<div class="col-11 push-1">
 					<div class="col-12">
-						
+						Delavix was made to be secured. We were made it with MVC Pattern and PDO.<br>
+						But you may increase the security if you want.
+
+						<h3>Authentification</h3>
+						You may verifying each user with delavix authentification.<br><br>
+						Using auth in controller :
+						<pre><code class="language-php">
+$data = $this->model('DataAdmin')->select()->execute();
+
+if(Auth::user()->id == $data->id_admin){
+	//your proccess
+}
+						</code></pre>
+						Using auth in View :
+						<pre><code class="language-php">echo $auth->user()->username;</code></pre>
+						<h3>CSRF Protection</h3>
+						Secure your application from CSRF. You may use token. <br>
+
+						First, make the token in your form.
+						<pre><code class="language-php">
+	&lt;form&gt;
+		$auth()-&gt;token();
+		&lt;input type="tex" name="username"&gt;
+		&lt;input type="password" name="password"&gt;
+	&lt;/form&gt;
+						</code></pre>
+						And verify the token in the controller before process :
+						<pre><code class="language-php">
+	public function insertNew(){
+		$this->verifToken($_POST["token"]);
+		//your process
+	}
+						</code></pre>
+
+						If you want to make the static token (in foreach), use this: 
+						<pre><code class="language-php">
+	foreach($data as $user){ 
+		
+		echo $user->name;
+		echo '&lt;a href="delete/'.$user->id.'/'.$auth->staticToken.'"&gt;delete&lt;/a&gt;';
+
+	}
+						</code></pre>
 					</div>
 				</div>
 			<script type="text/javascript" src="../assets/js/prism.js"></script>

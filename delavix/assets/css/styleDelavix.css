@@ -93,6 +93,7 @@ main > .col-12 {
 }
 .buttonStyle { 
 	transition: 0.3s ease;
+	line-height: 28px;
 }
 .buttonStyle:hover {
 	color: #333;
