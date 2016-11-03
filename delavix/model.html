@@ -52,7 +52,7 @@ foreach ($data as $user){
     $this->redirect('home');
 }
     					</code></pre>
-    					You can use method <span class="codeCol">$this->bcrypt()</span> to secure your password. To verify your password, you may use method<span class="codeCol">$this->verify($_POST['password'], $hash)</span> And you may also redirect with method <span class="codeCol">$this->redirect()</span> 
+    					You can use method <span class="codeCol">$this->bcrypt()</span> to secure your password. To verify your password, you may use method <span class="codeCol">$this->verify($_POST['password'], $hash)</span> And you may also redirect with method <span class="codeCol">$this->redirect()</span> 
     					<h4>Update Data</h4>
     					<pre><code class="language-php">
 $user = $this->model('User')
