@@ -72,6 +72,12 @@ $user = $this->model('User')
     					<pre><code class="language-php">$users = $this->model('User')->select()->orderBy('id', 'DESC')->execute();
 $users = $this->model('User')->select()->orderBy(['id' => 'DESC', 'name' => 'DESC'])->execute(); //with array
                         </code></pre>
+                        <h4>Group By</h4>
+                        <pre><code class="language-php">$users = $this->model('User')->select(["username", "COUNT(child) AS child"])->groupBy("username")->execute();
+                        </code></pre>
+                        <h4>Having</h4>
+                        <pre><code class="language-php">$users = $this->model('User')->select(["username", "COUNT(child) AS child"])->groupBy("username")->having("COUNT(child)", ">", "1")->execute();
+                        </code></pre>
     					<h4>Paginate</h4>
                         Make paginate with delavix is so easy. <br> First, you must make parameter in route : 
                         <pre><code class="language-php">$route->url("/user/:page", "home", "page");</code></pre>
@@ -95,4 +101,4 @@ public function paging($page){
                ->rightJoin('Company')->on('user.username', '=', 'company.employee')->execute();</code></pre>
 					</div>
 				</div>
-			<script type="text/javascript" src="../assets/js/prism.js"></script>}
+			<script type="text/javascript" src="../assets/js/prism.js"></script>
