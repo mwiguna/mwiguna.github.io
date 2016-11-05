@@ -40,7 +40,7 @@ if(Auth::user()->id == $data->id_admin){
 	foreach($data as $user){ 
 		
 		echo $user->name;
-		echo '&lt;a href="delete/'.$user->id.'/'.$auth->staticToken.'"&gt;delete&lt;/a&gt;';
+		echo '&lt;a href="delete/'.$user->id.'/'.$auth->staticToken().'"&gt;delete&lt;/a&gt;';
 
 	}
 						</code></pre>
