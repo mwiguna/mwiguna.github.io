@@ -1,0 +1,15 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(HelveticaNeue.ttf);
+}
+.main {
+	background: url(green.jpg);
+	height: 100%;
+}
+.main-title {
+	font-size: 32pt;
+	font-family: HelveticaNeue;
+	color: #fff;
+	margin: 5% 0;
+	text-align: center;
+}

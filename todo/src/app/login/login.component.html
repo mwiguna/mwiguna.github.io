@@ -1,0 +1,9 @@
+<div class="main col-12">
+	<div class="main-title col-12">What Should I Do?</div>
+	<div class="login col-4 offset-4">
+		<input type="text"     name='username' [(ngModel)] = 'user.username' />
+		<input type="password" name='password' [(ngModel)] = 'user.password' />
+		<button (click) = "login()" type="button">Login</button>
+		<a routerLink="/register"><button>Register</button></a>
+	</div>
+</div>
