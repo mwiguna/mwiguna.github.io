@@ -1,4 +1,6 @@
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/AuthService';
 import { User } from '../model/user';
 
 @Component({
@@ -9,9 +11,14 @@ import { User } from '../model/user';
 
 export class LoginComponent implements OnInit {
   user = new User();
-  constructor() {}
+  constructor(private auth: AuthService, private route: Router) {}
 
   ngOnInit() {}
-  login() {}
+  login() {
+  	this.auth.login(this.user.username, this.user.password).subscribe(
+  		data  => { this.route.navigate(['/']); },
+  		error => { console.log(error); }
+  	)
+  }
 
 }

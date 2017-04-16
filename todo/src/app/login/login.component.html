@@ -1,9 +1,11 @@
 <div class="main col-12">
 	<div class="main-title col-12">What Should I Do?</div>
 	<div class="login col-4 offset-4">
-		<input type="text"     name='username' [(ngModel)] = 'user.username' />
-		<input type="password" name='password' [(ngModel)] = 'user.password' />
-		<button (click) = "login()" type="button">Login</button>
-		<a routerLink="/register"><button>Register</button></a>
+		<input type="text"     class="col-12 input" name='username' [(ngModel)] = 'user.username' placeholder="username" />
+		<input type="password" class="col-12 input" name='password' [(ngModel)] = 'user.password' placeholder="password" />
+		<div class="col-12">
+			<button (click) = "login()" type="button" class="col-3 btn-blue">Login</button>
+			<a routerLink="/register"><button class="col-3 btn-green">Register</button></a>
+		</div>
 	</div>
 </div>

@@ -1,3 +1,8 @@
-<p>
-  home works!
-</p>
+<div class="col-12 main-home">
+	<div class="col-12 header-home">What Should I Do?</div>
+	<div class="col-8 offset-2 todo">
+		<div *ngFor="let todo of todos">{{ todo.keterangan + " - " + todo.deadline }}</div>
+		<div *ngIf="user">{{ user.username }}</div>
+		<button (click) = "logout()" class="col-3 btn-red mtop1">Logout</button>
+	</div>
+</div>

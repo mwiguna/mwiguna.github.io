@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 import { AuthGuard } from './auth/AuthGuard';
+import { AuthService } from './auth/AuthService';
+import { TodoService } from './api/todo.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -23,7 +25,7 @@ import { RegisterComponent } from './register/register.component';
     HttpModule,
     routing
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AuthService, TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
