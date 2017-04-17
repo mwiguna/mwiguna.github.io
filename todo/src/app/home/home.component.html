@@ -1,8 +1,17 @@
 <div class="col-12 main-home">
 	<div class="col-12 header-home">What Should I Do?</div>
 	<div class="col-8 offset-2 todo">
-		<div *ngFor="let todo of todos">{{ todo.keterangan + " - " + todo.deadline }}</div>
-		<div *ngIf="user">{{ user.username }}</div>
-		<button (click) = "logout()" class="col-3 btn-red mtop1">Logout</button>
+		<div *ngIf="user" class="col-11 title-menu">Welcome {{ user.name }}!</div>	
+		<div class="col-1 menuContainer mtop1 mbot1">
+			<button (click)="menu()" class="col-12 btn-blue m0 p8">Menu</button>
+			<div id="menu">
+				<div class="col-12 menu-item">Add Todo</div>
+				<div class="col-12 menu-item">Profil</div>
+				<div class="col-12 menu-item" (click)="logout()">Logout</div>
+			</div>
+		</div>
+	
+		<input type="text" class="col-12 input" name="search" placeholder="Search Todo...">
+		<div *ngFor="let todo of todos" class="col-12 todo-item">{{ todo.keterangan + " - " + todo.deadline }}</div>
 	</div>
 </div>

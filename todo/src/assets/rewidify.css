@@ -22,7 +22,6 @@ html, body {
 }
 [class*="col-"] {
 	float: left;
-	overflow: hidden;
 	word-break: keep-all;
 	transition: 0.3s ease;
 }

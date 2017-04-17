@@ -14,6 +14,7 @@ import { User } from '../model/user';
 export class HomeComponent implements OnInit {
   todos: Todo[];
   user: User[];
+  show = false;
 
   constructor(private auth: AuthService, private route: Router, private todo: TodoService) {
   	this.todo.getTodos().subscribe(todos => {
@@ -22,6 +23,12 @@ export class HomeComponent implements OnInit {
   	this.todo.getUser().subscribe(user => {
   		this.user = user;
     })
+  }
+
+  menu(){
+    let menu = document.getElementById('menu').style;
+    if(this.show){menu.display = 'none';  this.show = false;} 
+    else         {menu.display = 'block'; this.show = true;}
   }
 
   logout(){

@@ -1,11 +1,20 @@
 <div class="main col-12">
 	<div class="main-title col-12">What Should I Do?</div>
-	<div class="login col-4 offset-4">
-		<input type="text"     class="col-12 input" name='username' [(ngModel)] = 'user.username' placeholder="username" />
-		<input type="password" class="col-12 input" name='password' [(ngModel)] = 'user.password' placeholder="password" />
-		<div class="col-12">
-			<button (click) = "login()" type="button" class="col-3 btn-blue">Login</button>
-			<a routerLink="/register"><button class="col-3 btn-green">Register</button></a>
+	<form #userForm="ngForm" (ngSubmit)="login(userForm.value)" class="login col-4 offset-4">
+		<input type="text" class="col-12 input" [(ngModel)]="userData.username" name="username" #usernameVal="ngModel" placeholder="username" minlength="5" required />
+		<div *ngIf="usernameVal.errors && usernameVal.dirty">
+			<div [hidden]="!usernameVal.errors.required"  class="col-12 alert-red">Username Required</div>
+			<div [hidden]="!usernameVal.errors.minlength" class="col-12 alert-red">Min Length 5</div>
 		</div>
-	</div>
+
+		<input type="password" class="col-12 input" name='password' [(ngModel)] = 'userData.password' #passwordVal="ngModel" placeholder="password" required />
+		<div *ngIf="passwordVal.dirty" [hidden]="passwordVal.valid"  class="col-12 alert-red">Password Required</div>
+
+		<div class="col-12 mbot1">
+			<div   [hidden]="userForm.form.valid" class="col-12">Please Complete the Form</div>
+			<input [hidden]="userForm.form.invalid" type="submit" class="col-3 btn-blue" value="Login">
+		</div>
+		<div class="col-5 mtop1">Doesn't Have Account?</div>
+		<a routerLink="/register"><button class="col-3 mtop1 btn-green">Register</button></a>
+	</form>
 </div>

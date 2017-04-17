@@ -10,7 +10,10 @@ button {padding: 1%}
 
 .main {
 	background: url(green.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 	min-height: 100vh;
+	padding: 2%;
 }
 .main-title {
 	font-size: 32pt;
@@ -18,6 +21,11 @@ button {padding: 1%}
 	margin: 5% 0;
 	text-align: center;
 	font-family: HelveticaNeue;
+}
+.title-menu {
+	font-size: 16pt;
+	color: #555;
+	margin: 1% 0;
 }
 .login {
 	border: 1px solid #fff;
@@ -55,6 +63,21 @@ button {padding: 1%}
 .btn-green:hover {background-color: #1A5}
 .btn-red:hover   {background-color: #B32}
 
+.alert-red, .alert-green {
+	padding: 2%;
+	margin-bottom: 2%;
+	border-radius: 3px;
+	font-size: 11.5pt;
+}
+.alert-red {;
+	background-color: rgba(245, 30, 40, 0.1);
+	color: #B22;
+}
+.alert-green {;
+	background-color: rgba(35, 240, 40, 0.1);
+	color: #2B2;
+}
+
 /* -- Home -- */
 
 .main-home {
@@ -69,16 +92,51 @@ button {padding: 1%}
 	color: #fff;
 	font-family: HelveticaNeue;
 }
+#menu {
+	background-color: #fff;
+	position: absolute;
+	box-shadow: 0 0 2px 1px #cacaca;
+	border-radius: 2px;
+	width: 200%;
+	top: 100%;
+	left: 0;
+	display: none;
+}
+.menuContainer {position: relative}
+.menu-item {padding: 6%}
+.menu-item:hover {
+	cursor: pointer;
+	background-color: #38D;
+	border-radius: 2px;
+	color: #fff;
+}
 .todo {
 	padding: 2%;
 	background-color: #fff;
 	box-shadow: 0 0 9px 1px #bbb;
-	margin-top: -2%;
+	margin: 2% 0;
 	border-radius: 4px;
 	font-family: ProximaNova;
+}
+.todo-item {
+	padding: 2% 1%;
+	box-shadow: 0 0 2px 1px #cacaca;
+	margin-bottom: 2%;
+	border-radius: 2px;
 }
 
 /* -- General -- */
 
+.m0    {margin: 0}
 .mtop1 {margin-top: 1%}
+.mbot1 {margin-bottom: 1%}
+.mbot2 {margin-bottom: 2%}
+.ptop1 {padding-top: 1%}
+.p1    {padding: 1%}
+.p8    {padding: 8%}
 
+@media only screen and (max-width: 610px){
+	#menu {
+		width: 100%;
+	}
+}
