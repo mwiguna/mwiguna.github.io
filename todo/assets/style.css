@@ -11,7 +11,7 @@ button {padding: 1%}
 .main {
 	background: url(green.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 100% 100%;
 	min-height: 100vh;
 	padding: 2%;
 }
@@ -124,6 +124,10 @@ button {padding: 1%}
 	margin-bottom: 2%;
 	border-radius: 2px;
 }
+.deadline {
+	font-size: 10pt;
+	color: #555;
+}
 
 /* -- General -- */
 
@@ -133,10 +137,10 @@ button {padding: 1%}
 .mbot2 {margin-bottom: 2%}
 .ptop1 {padding-top: 1%}
 .p1    {padding: 1%}
+.p3    {padding: 3%}
 .p8    {padding: 8%}
 
 @media only screen and (max-width: 610px){
-	#menu {
-		width: 100%;
-	}
+	#menu {width: 100%}
+	.p8 {padding: 3%}
 }

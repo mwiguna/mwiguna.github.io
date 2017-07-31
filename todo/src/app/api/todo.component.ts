@@ -13,7 +13,11 @@ export class TodoService {
 	}
 
 	getMyTodos(){
-		return this.http.get(this.url + 'getTodos/' + this.getIdUser).map(res => res.json())
+		return this.http.get(this.url + 'getTodos/' + this.getIdUser()).map(res => res.json())
+	}
+
+	getTodo(id: any){
+		return this.http.get(this.url + 'getTodo/' + id).map(res => res.json())
 	}
 
 	getUsers(){
@@ -24,7 +28,26 @@ export class TodoService {
 		return this.http.get(this.url + 'user/' + this.getIdUser()).map(res => res.json())
 	}
 
+	addTodo(val: any){
+		return this.http.post(this.url + 'insertTodo', `id=${this.getIdUser()}&token=${this.getToken()}&keterangan=${val.keterangan}&kategori=${val.kategori}&tanggal=${val.tanggal}&deadline=${val.deadline}`, this.getHeader())
+		.map(res => res.json())
+	}	
+
+	deleteTodo(id: any){
+		return this.http.post(this.url + 'deleteTodo', `id=${id}&token=${this.getToken()}`, this.getHeader())
+		.map(res => res.json())
+	}
+
 	private getIdUser(){
 		return localStorage.getItem('user_id');
+	}
+
+	private getToken(){
+		return localStorage.getItem('token');
+	}
+
+	getHeader(){
+		var headers = new Headers({'Content-type': 'application/x-www-form-urlencoded'});
+		return new RequestOptions({headers: headers});
 	}
 }
