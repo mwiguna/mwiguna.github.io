@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthService {
+	url = 'https://mydeveloper.cf/todo/';
+
 	constructor(private http: Http){}
 
 	getHeader(){
@@ -13,7 +15,7 @@ export class AuthService {
 	}
 
 	login(username: string, password: string){
-		return this.http.post('https://service.agroshopindonesia.com/todo/login', `username=${username}&password=${password}`, this.getHeader())
+		return this.http.post(this.url + 'login', `username=${username}&password=${password}`, this.getHeader())
 		.map((response: Response) => {
 			let res = response.json();
 			if(res.id){
@@ -30,7 +32,7 @@ export class AuthService {
 	}
 
 	register(name: string, username: string, email: string, password: string){
-		return this.http.post('https://service.agroshopindonesia.com/todo/register', `name=${name}&username=${username}&email=${email}&password=${password}`, this.getHeader())
+		return this.http.post(this.url + 'register', `name=${name}&username=${username}&email=${email}&password=${password}`, this.getHeader())
 		.map((response: Response) => { console.log(response.json()) });
 	}
 }

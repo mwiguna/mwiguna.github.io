@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class TodoService {
-	url = 'https://service.agroshopindonesia.com/todo/';
+	url = 'https://mydeveloper.cf/todo/';
 
 	constructor(private http:Http){}
 
