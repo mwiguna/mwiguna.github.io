@@ -12,9 +12,9 @@
 		</div>
 	
 		<form #todoForm="ngForm" (ngSubmit)="addTodo(todoForm.value)" class="col-12">
-			<input type="text" class="col-12 input" name='keterangan' placeholder="Description" [(ngModel)]='keterangan' required />
-			<input type="text" class="col-12 input" name='kategori' placeholder="Category" [(ngModel)]='kategori' required />
-			<input type="text" class="col-12 input" name='tanggal'  placeholder="Date" [(ngModel)]='tanggal' required />
+			<input type="text" class="col-12 input" name='keterangan' placeholder="Description" [(ngModel)]='todos.keterangan' required />
+			<input type="text" class="col-12 input" name='kategori' placeholder="Category" [(ngModel)]='todos.kategori' required />
+			<input type="text" class="col-12 input" name='tanggal'  placeholder="Date" [(ngModel)]='time.tanggal' required />
 			<input type="text" class="col-12 input" name='deadline' placeholder="Deadline" [(ngModel)]='deadline' required />
 
 			<div class="col-12 mbot1">

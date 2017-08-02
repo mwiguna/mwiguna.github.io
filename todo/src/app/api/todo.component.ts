@@ -31,6 +31,11 @@ export class TodoService {
 	addTodo(val: any){
 		return this.http.post(this.url + 'insertTodo', `id=${this.getIdUser()}&token=${this.getToken()}&keterangan=${val.keterangan}&kategori=${val.kategori}&tanggal=${val.tanggal}&deadline=${val.deadline}`, this.getHeader())
 		.map(res => res.json())
+	}
+
+	editTodo(id: any, val: any){
+		return this.http.post(this.url + 'updateTodo', `id=${id}&token=${this.getToken()}&keterangan=${val.keterangan}&kategori=${val.kategori}&tanggal=${val.tanggal}&deadline=${val.deadline}`, this.getHeader())
+		.map(res => res)
 	}	
 
 	deleteTodo(id: any){

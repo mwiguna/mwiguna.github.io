@@ -12,13 +12,14 @@
 		</div>
 	
 		<input type="text" [(ngModel)]="search" class="col-12 input" placeholder="Search Todo...">
+
 		<div *ngFor="let todo of todos | filter: search" class="col-12 todo-item" id="{{ todo.id }}">
 			<div class="col-9">
 				<div class="col-12">{{ todo.keterangan }}</div>
 				<div class="col-12 deadline">Deadline : {{ todo.deadline | date: 'longDate' }}</div>
 			</div>
 			<div class="col-3 mtop1">
-				<button routerLink="['editTodo', {{ todo.id }}]" class="col-5 btn-green p3 mbot1">Edit</button>
+				<button routerLink="editTodo/{{ todo.id }}" class="col-5 btn-green p3 mbot1">Edit</button>
 				<button (click)="deleteTodo(todo.id)" class="col-5 btn-red p3">Delete</button>
 			</div>
 		</div>

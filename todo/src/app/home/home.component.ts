@@ -35,13 +35,15 @@ export class HomeComponent implements OnInit {
   }
 
   deleteTodo(id: any){
-   this.todo.deleteTodo(id).subscribe(
-      data  => {
-        document.getElementById(id).remove(); 
-        alert("Success!");
-      },
-      error => { alert(error); }
-    )
+    if(confirm('Yakin ingin menghapus?')){
+      this.todo.deleteTodo(id).subscribe(
+        data  => { 
+          document.getElementById(id).remove();
+          this.todo.getMyTodos().subscribe(todos => { this.todos = todos; })  
+        },
+        error => { alert(error); }
+      )
+    }
   }
 
   ngOnInit() {}

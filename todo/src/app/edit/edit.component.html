@@ -1,3 +1,27 @@
-<p>
-  edit works!
-</p>
+<div class="col-12 main-home">
+	<div class="col-12 header-home">What Should I Do?</div>
+	<div class="col-8 offset-2 todo">
+		<div class="col-11 title-menu">Edit Todo</div>	
+		<div class="col-1 menuContainer mtop1 mbot1">
+			<button (click)="menu()" class="col-12 btn-blue m0 p8">Menu</button>
+			<div id="menu">
+				<div class="col-12 menu-item" routerLink="/">Home</div>
+				<div class="col-12 menu-item" routerLink="/profil">Profil</div>
+				<div class="col-12 menu-item" (click)="logout()">Logout</div>
+			</div>
+		</div>
+	
+		<form #todoForm="ngForm" (ngSubmit)="editTodo(todoForm.value)" class="col-12">
+			<input type="text" class="col-12 input" name='keterangan' placeholder="Description" [(ngModel)]='todos.keterangan' required />
+			<input type="text" class="col-12 input" name='kategori' placeholder="Category" [(ngModel)]='todos.kategori' required />
+			<input type="text" class="col-12 input" name='tanggal'  placeholder="Date" [(ngModel)]='todos.tanggal' required />
+			<input type="text" class="col-12 input" name='deadline' placeholder="Deadline" [(ngModel)]='todos.deadline' required />
+
+			<div class="col-12 mbot1">
+				<div   [hidden]="todoForm.form.valid" class="col-12">Please Complete the Form</div>
+				<input [hidden]="todoForm.form.invalid" type="submit" class="col-3 btn-green p1" value="Edit Todo">
+			</div>
+		</form>	
+		
+	</div>
+</div>
