@@ -1,0 +1,48 @@
+
+* {
+  font-family:Nunito
+}
+
+body {
+  background-color: #f8f9fc;
+}
+
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 320px;
+  border-radius: 0.5em;
+}
+
+.genre {
+  font-size: 17pt;
+  font-weight: 900;
+  color: #EF6C00;
+}
+.title {
+  font-size: 20pt;
+  font-weight: 900;
+  color: #345566;
+  margin-bottom: 9px;
+}
+
+.img-container {
+  padding: 0 18%;
+}
+
+.splide {
+  padding: 0 1em !important;
+}
+
+.splide__slide {
+  padding: 10px;
+}
+
+.splide__pagination__page.is-active {
+  background: #42a5f5 !important;
+}
+
+.splide__pagination__page {
+  width: 7.5px !important;
+}
