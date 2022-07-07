@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/kontak" element={<Kontak />} />
-        <Route path="/riwayat_pendidikan" element={<RiwayatPendidikan />} />
+        <Route path="/riwayat_pendidikan/:id" element={<RiwayatPendidikan />} />
       </Routes>
 
     </div>

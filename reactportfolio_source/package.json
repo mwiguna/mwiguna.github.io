@@ -1,6 +1,6 @@
 {
   "name": "reactportfolio",
-  "homepage": "https://mwiguna.github.io/reactportfolio_source/build",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
