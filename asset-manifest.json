@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/reactportfolio/react-gh-pages/static/css/main.04bbd64a.css",
+    "main.js": "/reactportfolio/react-gh-pages/static/js/main.db6beb6c.js",
+    "index.html": "/reactportfolio/react-gh-pages/index.html",
+    "main.04bbd64a.css.map": "/reactportfolio/react-gh-pages/static/css/main.04bbd64a.css.map",
+    "main.db6beb6c.js.map": "/reactportfolio/react-gh-pages/static/js/main.db6beb6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04bbd64a.css",
+    "static/js/main.db6beb6c.js"
+  ]
+}
