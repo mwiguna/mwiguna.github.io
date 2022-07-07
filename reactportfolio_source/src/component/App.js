@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <Link to="/" className="pr-1">Home</Link>
       <Link to="/kontak" className="px-1">Kontak</Link>
-      <Link to="/riwayat_pendidikan" className="px-1">RiwayatPendidikan</Link>
+      <Link to="/riwayat_pendidikan/1" className="px-1">RiwayatPendidikan 1</Link>
+      <Link to="/riwayat_pendidikan/2" className="px-1">RiwayatPendidikan 2</Link>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
